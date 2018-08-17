@@ -1,0 +1,25 @@
+Using SASS
+- yarn add sass-loader node-sass
+- create assets/scss/app.scss
+- in nuxt.config.js at bottom:
+    css: [
+      '@/assets/scss/app.scss'
+    ]
+
+ROUTE PARAMS
+/posts/{id}
+- create posts/_id.vue
+- add:
+    async asyncData({params}){ //will accept the params
+        let response = await axios.get('https://jsonplaceholder.typicode.com/posts/' + params.id);
+        return {
+            post:response.data
+        }
+    }
+
+VENDOR
+build: {
+    vendor:[
+        'axios'
+    ],
+when we do the above and run nuxt build it will create a vendor dir and make vue files smaller
