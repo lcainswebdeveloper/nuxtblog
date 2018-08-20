@@ -10,6 +10,9 @@ export default {
     components:{
         Post
     },
+    head:{
+        title:'Posts'
+    },
     data(){
         return{
             posts:[]

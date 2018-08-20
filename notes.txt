@@ -23,3 +23,23 @@ build: {
         'axios'
     ],
 when we do the above and run nuxt build it will create a vendor dir and make vue files smaller
+
+PAGE META
+if we don't need to assign a title from asyncData:
+head:{
+    title:'Posts'
+},
+otherwise, we define it as a function that gets called once the data is available:
+head(){
+    return {
+        title:this.post.title
+    }
+}
+
+LAYOUTS
+Create new post.vue in layouts directory:
+Then in vue file that will use it:
+export default {
+    ..
+    layout:"post" 
+}
