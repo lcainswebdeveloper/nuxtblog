@@ -41,6 +41,7 @@ module.exports = {
   },
   css: [
       '@/assets/scss/app.scss'
-  ]
+  ],
+  plugins:['@/plugins/mixins/pluralize']
 }
 

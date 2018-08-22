@@ -43,3 +43,5 @@ export default {
     ..
     layout:"post" 
 }
+
+Global Mixins

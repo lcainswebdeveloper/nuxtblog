@@ -1,10 +1,12 @@
 <template>
     <div>
+        <h3>{{posts.length}} {{pluralize('post', posts.length)}}</h3>
         <post :key="post.id" v-for="post in posts" :post="post"></post>
     </div>
 </template>
 <script>
 import axios from 'axios';
+
 import Post from '@/components/Post'
 export default {
     components:{
